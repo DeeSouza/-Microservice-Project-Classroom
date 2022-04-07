@@ -23,7 +23,7 @@ export class CoursesResolver {
     return this.coursesService.listAllCourses();
   }
 
-  @Query(() => [Course])
+  @Query(() => Course)
   @UseGuards(AuthorizationGuard)
   async course(@Args('id') id: string, @CurrentUser() user: AuthUser) {
     const student = await this.studentsService.getStudentByAuthUserId(user.sub);
