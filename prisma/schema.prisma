@@ -12,12 +12,16 @@ model Student {
 
   enrollments Enrollment[]
 
+  authUserId String? @unique
+
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 }
 
 model Course {
   id String @id @default(uuid())
+
+  title String
 
   slug String @unique
 
