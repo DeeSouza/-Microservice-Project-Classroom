@@ -15,4 +15,16 @@ export class EnrollmentsService {
       },
     });
   }
+
+  listEnrollmentsByStudentId(studentId: string) {
+    return this.prisma.enrollment.findMany({
+      where: {
+        canceledAt: null,
+        studentId,
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+  }
 }
