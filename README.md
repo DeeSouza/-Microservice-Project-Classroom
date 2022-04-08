@@ -27,6 +27,10 @@ docker-compose up -d
 
 **Projetos**
 
+https://github.com/DeeSouza/Microservice-Project-Frontend-Web
+https://github.com/DeeSouza/Microservice-Project-Purchases
+https://github.com/DeeSouza/Microservice-Project-Gateway-Apollo-Federation
+
 ### Prisma Studio
 
 ```
