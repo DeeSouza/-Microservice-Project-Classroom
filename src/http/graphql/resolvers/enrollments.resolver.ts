@@ -23,11 +23,11 @@ export class EnrollmentsResolver {
 
   @ResolveField()
   course(@Parent() enrollment: Enrollment) {
-    return this.coursesService.getCourseById(enrollment.id);
+    return this.coursesService.getCourseById(enrollment.courseId);
   }
 
   @ResolveField()
   student(@Parent() enrollment: Enrollment) {
-    return this.studentsService.getStudentById(enrollment.id);
+    return this.studentsService.getStudentById(enrollment.studentId);
   }
 }
